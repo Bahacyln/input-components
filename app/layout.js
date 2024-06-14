@@ -1,19 +1,18 @@
-import { Inter } from "next/font/google";
+"use client"
 import "./globals.css";
-import Header from "@/components/header";
-const inter = Inter({ subsets: ["latin"] });
+import Header from "/components/header";
+import { usePathname } from "next/navigation";
 
-export const metadata = {
-  title: "Input Components",
-  description: "Made With By ",
-};
+export default function RootLayout({children}) {
 
-export default function RootLayout({ children }) {
+  const pathname = usePathname();
+
+  console.log("LAYOUT TETİKLENDİ")
 
   return (
     <html>
       <body>
-        <Header/>
+        <Header currentPath={pathname}/>
         {children}
       </body>
     </html>

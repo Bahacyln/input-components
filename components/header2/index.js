@@ -3,31 +3,15 @@ import styles from './styles.module.css'
 import Link from 'next/link'
 import { LuTextCursorInput } from "react-icons/lu";
 
-const getCurrentPathValue = (ARR,pathName) =>{
-    for(let i=0;i<ARR.length;i++){
-        if(ARR[i]==pathName)
-            return 0;
-    }
-    return 1;
-}
-
-function Header({currentPath}) {
-
-    const notLayoutArray = [
-        "/login",
-        "/page3"
-    ];
-
-    const durum = getCurrentPathValue(notLayoutArray, currentPath);
-    console.log("durum",durum);
-    
-    const headerItem = (durum?<div className={styles.headerBody} >
+function Header2() {
+  return (
+    <div className={styles.headerBody} >
         <div className={styles.headerInfos}>
             <Link href="/" className={styles.headerLogo}>
                 <LuTextCursorInput className={styles.logoInput}/>
             </Link>
             <div className={styles.headerTitle}>
-                Input Components
+                Input Components(header 2)
             </div>
         </div>
         <div className={styles.headerButtons}>
@@ -40,14 +24,9 @@ function Header({currentPath}) {
             <Link href="/page3" className={styles.headerButton}>
                 Page 3
             </Link>
-            <Link href="/login" className={styles.loginButton}>
-                Giriş Yap
-            </Link>
         </div>
-    </div>:"");
-
-
-    return headerItem;
+    </div>
+  )
 }
 
-export default Header
+export default Header2

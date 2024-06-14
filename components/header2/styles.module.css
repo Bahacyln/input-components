@@ -43,20 +43,3 @@
 .headerButton:hover{
     background:linear-gradient(360deg, rgba(255, 255, 255, 0.439), rgba(255, 255, 255, 0));
 }
-.loginButton{
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 17px;
-    font-weight: 600;
-    border: 2px dashed #8a8888;
-    width: 100px;
-    justify-content: center;
-    display: flex;
-    height: 75%;
-    align-items: center;
-    border-radius: 12px;
-}
-.loginButton:hover{
-    background: linear-gradient(360deg, rgba(255, 255, 255, 0.439), rgba(255, 255, 255, 0));
-    border: solid;
-}
